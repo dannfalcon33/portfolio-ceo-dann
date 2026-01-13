@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "LadyGaga FanPage",
     category: "Frontend Development con React + Typescript",
-    image: "./dist/images/ladygaga-web.png",
+    image: "/images/ladygaga-web.png",
     year: "2025",
     description:
       "Una página visualmente inmersiva y dinámica dedicada a Lady Gaga, construida con tecnologías web modernas. Este proyecto presenta una estética única que mezcla vibras industriales, futuristas y retro-tech (VHS), reflejando las eras 'Mayhem' y 'Chromatica'.",
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     title: "Logos Tarot Web",
     category:
       "Frontend Development con React + Typescript, utilizando Tailwind CSS.",
-    image: "./dist/images/logos-tarot-web.png",
+    image: "/images/logos-tarot-web.png",
     year: "2025",
     description:
       "Logos Tarot es una aplicación interactiva diseñada para ofrecer una experiencia espiritual profunda y accesible. Combina la sabiduría ancestral del Tarot con la tecnología moderna de inteligencia artificial. Con cartas de tarot con un diseño único y moderno al estilo del arte de Fantasia Espacial tendrás una experiencia visual impactante.",
@@ -166,8 +166,8 @@ export const ABOUT_CONTENT = {
     downloadCv: "Descargar CV",
   },
   image: {
-    sidebar: "./dist/images/profile.jpg",
-    modal: "./dist/images/profile2.jpg",
+    sidebar: "/images/profile.jpg",
+    modal: "/images/profile2.jpg",
   },
 };
 

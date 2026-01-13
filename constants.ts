@@ -166,8 +166,8 @@ export const ABOUT_CONTENT = {
     downloadCv: "Descargar CV",
   },
   image: {
-    sidebar: "/images/profile.jpg",
-    modal: "/images/profile2.jpg",
+    sidebar: "/images/profile.png",
+    modal: "/images/profile2.png",
   },
 };
 

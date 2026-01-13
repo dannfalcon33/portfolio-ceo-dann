@@ -1,71 +1,83 @@
-import React, { useState } from 'react';
-import SectionWrapper from './SectionWrapper';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import React, { useState } from "react";
+import SectionWrapper from "./SectionWrapper";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
+import { ABOUT_CONTENT } from "../constants";
 
 const About: React.FC = () => {
   const [showBio, setShowBio] = useState(false);
 
   return (
-    <SectionWrapper id="about">
+    <SectionWrapper id="sobre mi">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5 relative hidden lg:block h-[60vh] border-r border-luxury-border pr-12">
-           <img 
-            src="https://picsum.photos/600/800?grayscale" 
+          <img
+            src={ABOUT_CONTENT.image.sidebar}
             alt="Yoshua Soto"
             className="w-full h-full object-cover filter brightness-50 contrast-125"
-           />
-           <div className="absolute bottom-4 left-[-20px] bg-luxury-black p-4 border border-luxury-border">
-             <span className="font-serif text-4xl text-luxury-white">01</span>
-           </div>
+          />
+          <div className="absolute bottom-4 left-[-20px] bg-luxury-black p-4 border border-luxury-border">
+            <span className="font-serif text-4xl text-luxury-white">01</span>
+          </div>
         </div>
 
         <div className="lg:col-span-7 flex flex-col justify-center space-y-8">
-           <span className="text-xs tracking-[0.2em] text-luxury-gray uppercase font-sans">FULLSTACK DEVELOPER</span>
-           
-           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-luxury-white">
-             Yoshua "Dann" Soto, <br />
-             <span className="italic font-light opacity-80">Fullstack Developer with IA</span>
-           </h2>
+          <span className="text-xs tracking-[0.2em] text-luxury-gray uppercase font-sans">
+            {ABOUT_CONTENT.badge}
+          </span>
 
-           <p className="font-sans text-sm md:text-base text-luxury-gray leading-loose max-w-xl text-justify">
-             I am Yoshua Soto, a full-stack developer specializing in JavaScript/TypeScript. I have experience in web app development, mainly in Laravel and Django, as well as frontend development using vanilla CSS to create modern and responsive interfaces for all types of websites and apps, applying vanilla DOM management or using React with tools such as Frame-motion and GSAP. I currently work with NextJS to provide a more interactive user experience on the web.
-           </p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-luxury-white">
+            {ABOUT_CONTENT.title.main} <br />
+            <span className="italic font-light opacity-80">
+              {ABOUT_CONTENT.title.highlight}
+            </span>
+          </h2>
 
-           <div className="pt-8 flex flex-wrap gap-6">
-             <button 
-                onClick={() => setShowBio(true)}
-                className="group relative px-8 py-3 border border-luxury-border-strong hover:border-luxury-white transition-colors duration-500 overflow-hidden"
-              >
-               <span className="relative z-10 text-xs tracking-widest uppercase mix-blend-difference text-luxury-white">Read Biography</span>
-               <div className="absolute top-0 left-0 h-full w-0 bg-luxury-white group-hover:w-full transition-all duration-500 ease-out z-0"></div>
-             </button>
+          <p className="font-sans text-sm md:text-base text-luxury-gray leading-loose max-w-xl text-justify">
+            {ABOUT_CONTENT.description}
+          </p>
 
-             <a href="#" className="group relative px-8 py-3 border border-luxury-border-strong hover:border-luxury-white transition-colors duration-500 overflow-hidden flex items-center justify-center">
-               <span className="relative z-10 text-xs tracking-widest uppercase mix-blend-difference text-luxury-white">Download CV</span>
-               <div className="absolute top-0 left-0 h-full w-0 bg-luxury-white group-hover:w-full transition-all duration-500 ease-out z-0"></div>
-             </a>
-           </div>
+          <div className="pt-8 flex flex-wrap gap-6">
+            <button
+              onClick={() => setShowBio(true)}
+              className="group relative px-8 py-3 border border-luxury-border-strong hover:border-luxury-white transition-colors duration-500 overflow-hidden"
+            >
+              <span className="relative z-10 text-xs tracking-widest uppercase mix-blend-difference text-luxury-white">
+                {ABOUT_CONTENT.buttons.readBio}
+              </span>
+              <div className="absolute top-0 left-0 h-full w-0 bg-luxury-white group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+            </button>
+
+            <a
+              href="#"
+              className="group relative px-8 py-3 border border-luxury-border-strong hover:border-luxury-white transition-colors duration-500 overflow-hidden flex items-center justify-center"
+            >
+              <span className="relative z-10 text-xs tracking-widest uppercase mix-blend-difference text-luxury-white">
+                {ABOUT_CONTENT.buttons.downloadCv}
+              </span>
+              <div className="absolute top-0 left-0 h-full w-0 bg-luxury-white group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Biography Modal */}
       <AnimatePresence>
         {showBio && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-12"
           >
             {/* Backdrop */}
-            <div 
-              className="absolute inset-0 bg-luxury-overlay-strong backdrop-blur-md" 
+            <div
+              className="absolute inset-0 bg-luxury-overlay-strong backdrop-blur-md"
               onClick={() => setShowBio(false)}
             />
 
             {/* Modal Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -73,7 +85,7 @@ const About: React.FC = () => {
               className="relative bg-luxury-modal border border-luxury-border w-full max-w-6xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row shadow-2xl"
             >
               {/* Close Button */}
-              <button 
+              <button
                 onClick={() => setShowBio(false)}
                 className="absolute top-6 right-6 z-20 p-2 text-luxury-gray hover:text-luxury-white transition-colors border border-transparent hover:border-luxury-border rounded-full bg-luxury-black/50"
               >
@@ -82,47 +94,57 @@ const About: React.FC = () => {
 
               {/* Image Section */}
               <div className="w-full md:w-5/12 h-64 md:h-auto relative border-b md:border-b-0 md:border-r border-luxury-border">
-                 <img 
-                   src="https://picsum.photos/800/1000?grayscale&random=99" 
-                   alt="Yoshua Soto Profile"
-                   className="w-full h-full object-cover filter brightness-75 contrast-125"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent md:hidden"></div>
-                 <div className="absolute bottom-6 left-6 md:left-8">
-                    <h3 className="font-serif text-3xl text-white">Yoshua Soto</h3>
-                    <p className="text-[10px] tracking-widest uppercase text-white/70 mt-2">The Architect</p>
-                 </div>
+                <img
+                  src={ABOUT_CONTENT.image.modal}
+                  alt="Yoshua Soto Profile"
+                  className="w-full h-full object-cover filter brightness-75 contrast-125"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent md:hidden"></div>
+                <div className="absolute bottom-6 left-6 md:left-8">
+                  <h3 className="font-serif text-3xl text-white">
+                    Yoshua Soto
+                  </h3>
+                  <p className="text-[10px] tracking-widest uppercase text-white/70 mt-2">
+                    The Architect
+                  </p>
+                </div>
               </div>
 
               {/* Text Section */}
               <div className="w-full md:w-7/12 p-8 md:p-16 overflow-y-auto">
-                 <div className="flex items-center space-x-4 mb-8">
-                    <span className="text-4xl font-serif text-luxury-border-strong">01.1</span>
-                    <h2 className="text-xs tracking-[0.3em] uppercase text-luxury-white">Extended Biography</h2>
-                 </div>
+                <div className="flex items-center space-x-4 mb-8">
+                  <span className="text-4xl font-serif text-luxury-border-strong">
+                    {ABOUT_CONTENT.expandedBio.badge}
+                  </span>
+                  <h2 className="text-xs tracking-[0.3em] uppercase text-luxury-white">
+                    {ABOUT_CONTENT.expandedBio.title}
+                  </h2>
+                </div>
 
-                 <div className="prose max-w-none">
-                    <p className="font-serif text-xl md:text-2xl leading-relaxed text-luxury-white mb-8">
-                      "My name is Yoshua “Dann” Soto. Dann comes from my middle name, Daniel."
-                    </p>
-                    
-                    <div className="space-y-6 font-sans text-sm md:text-base leading-loose text-luxury-gray text-justify">
-                      <p>
-                        From a very young age, I grew up with computers, operating systems, and network connections. After finishing college, I gained experience working with local server infrastructure for a university, but I made the leap to web development with classic PHP, which at that time was version 7. Together with Laravel 8, I learned to develop very interesting apps at that time.
-                      </p>
-                      <p>
-                        Then, for a few years, I developed landing pages using only vanilla CSS, since Tailwind and Bootstrap have, in my opinion, many limitations for development. With that, I became a remote landing page developer for a mortgage loan brand in Miami.
-                      </p>
-                      <p>
-                        Currently, with my specialization in JavaScript/TypeScript and with the help of AI, I can create websites with incredible user experiences in React/TS, mainly applying GSAP and Framer-motion, so I use this tool (chatGPT codex) to develop.
-                      </p>
-                    </div>
+                <div className="prose max-w-none">
+                  <p className="font-serif text-xl md:text-2xl leading-relaxed text-luxury-white mb-8">
+                    {ABOUT_CONTENT.expandedBio.quote}
+                  </p>
 
-                    <div className="mt-12 pt-8 border-t border-luxury-border flex justify-between items-center">
-                        <span className="font-mono text-[10px] text-luxury-gray">EST. 199X</span>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Ctext x='50' y='20' font-family='cursive' font-size='20' fill='%23888' text-anchor='middle'%3EYoshua Soto%3C/text%3E%3C/svg%3E" alt="Signature" className="h-8 opacity-50" />
-                    </div>
-                 </div>
+                  <div className="space-y-6 font-sans text-sm md:text-base leading-loose text-luxury-gray text-justify">
+                    {ABOUT_CONTENT.expandedBio.paragraphs.map(
+                      (paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      )
+                    )}
+                  </div>
+
+                  <div className="mt-12 pt-8 border-t border-luxury-border flex justify-between items-center">
+                    <span className="font-mono text-[10px] text-luxury-gray">
+                      {ABOUT_CONTENT.expandedBio.est}
+                    </span>
+                    <img
+                      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Ctext x='50' y='20' font-family='cursive' font-size='20' fill='%23888' text-anchor='middle'%3EYoshua Soto%3C/text%3E%3C/svg%3E"
+                      alt="Signature"
+                      className="h-8 opacity-50"
+                    />
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>

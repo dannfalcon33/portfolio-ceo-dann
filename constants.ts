@@ -1,60 +1,84 @@
-import { Project, SkillCategory, Resource, MediaItem, AiMediaItem } from './types';
+import {
+  Project,
+  SkillCategory,
+  Resource,
+  MediaItem,
+  AiMediaItem,
+} from "./types";
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Monolith",
-    category: "Fullstack Architecture",
-    image: "https://picsum.photos/800/600?grayscale&random=1",
-    year: "2024",
-    description: "A headless commerce solution built for scalability. Features a microservices architecture, real-time inventory management, and AI-driven product recommendations. Designed to handle high-traffic flagship launches with sub-second latency.",
-    link: "https://example.com/project1"
+    title: "LadyGaga FanPage",
+    category: "Frontend Development con React + Typescript",
+    image: "./dist/images/ladygaga-web.png",
+    year: "2025",
+    description:
+      "Una página visualmente inmersiva y dinámica dedicada a Lady Gaga, construida con tecnologías web modernas. Este proyecto presenta una estética única que mezcla vibras industriales, futuristas y retro-tech (VHS), reflejando las eras 'Mayhem' y 'Chromatica'.",
+    link: "https://ladygaga-fan-page.yoshuasoto54.workers.dev/",
   },
   {
     id: 2,
-    title: "Fintech Dashboard",
-    category: "React / Node.js",
-    image: "https://picsum.photos/800/600?grayscale&random=2",
-    year: "2023",
-    description: "Real-time financial analytics platform visualizing complex market data. Implements WebSockets for live updates, D3.js for custom charting, and strict security protocols for sensitive user data.",
-    link: "https://example.com/project2"
+    title: "Logos Tarot Web",
+    category:
+      "Frontend Development con React + Typescript, utilizando Tailwind CSS.",
+    image: "./dist/images/logos-tarot-web.png",
+    year: "2025",
+    description:
+      "Logos Tarot es una aplicación interactiva diseñada para ofrecer una experiencia espiritual profunda y accesible. Combina la sabiduría ancestral del Tarot con la tecnología moderna de inteligencia artificial. Con cartas de tarot con un diseño único y moderno al estilo del arte de Fantasia Espacial tendrás una experiencia visual impactante.",
+    link: "https://logos-tarot-app.yoshuasoto54.workers.dev/",
   },
-  {
-    id: 3,
-    title: "AI Content Generator",
-    category: "GenAI Integration",
-    image: "https://picsum.photos/800/600?grayscale&random=3",
-    year: "2023",
-    description: "An editorial tool leveraging LLMs to assist content creators. Includes tone analysis, automated summarization, and a custom fine-tuned model for brand voice consistency.",
-    link: "https://example.com/project3"
-  }
 ];
 
 export const SKILLS: SkillCategory[] = [
   {
     title: "Frontend Engineering",
-    skills: ["JavaScript", "TypeScript", "React", "Vanilla CSS", "Framer Motion", "GSAP"]
+    skills: [
+      "CSS Vanilla",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Framer Motion",
+      "GSAP",
+    ],
   },
   {
     title: "Backend Architecture",
-    skills: ["Node.js", "Python", "PHP", "Django", "Laravel", "Next.js"]
+    skills: ["Node.js", "Python", "Supabase", "PrismaJS"],
   },
   {
-    title: "Design & Direction",
-    skills: ["Figma", "Prototyping with AI"]
-  }
+    title: "Frameworks",
+    skills: ["NextJS", "Astro", "Django"],
+  },
 ];
 
 export const RESOURCES: Resource[] = [
-  { title: "The Modern Stack Guide", type: "PDF Guide", link: "#" },
+  {
+    title: "AdminLTE Synthwave Admin",
+    type: "GitHub Repo",
+    link: "https://github.com/YoshuaSoto95/adminLTE-synthwave",
+  },
   { title: "React Performance Patterns", type: "Article", link: "#" },
-  { title: "Clean Architecture for Frontend", type: "GitHub Repo", link: "#" }
+  { title: "Clean Architecture for Frontend", type: "GitHub Repo", link: "#" },
 ];
 
 export const MEDIA: MediaItem[] = [
-  { title: "Building Scalable Systems", platform: "Tech Podcast", date: "OCT 2024" },
-  { title: "The Future of Web Dev", platform: "Conference Talk", date: "AUG 2024" },
-  { title: "Mastering TypeScript", platform: "YouTube Series", date: "JUN 2024" }
+  {
+    title: "Building Scalable Systems",
+    platform: "Tech Podcast",
+    date: "OCT 2024",
+  },
+  {
+    title: "The Future of Web Dev",
+    platform: "Conference Talk",
+    date: "AUG 2024",
+  },
+  {
+    title: "Mastering TypeScript",
+    platform: "YouTube Series",
+    date: "JUN 2024",
+  },
 ];
 
 export const AI_MEDIA: AiMediaItem[] = [
@@ -63,34 +87,132 @@ export const AI_MEDIA: AiMediaItem[] = [
     title: "Neural Dreams",
     type: "image",
     url: "https://picsum.photos/600/800?grayscale&random=10",
-    description: "Midjourney v6 Exploration"
+    description: "Midjourney v6 Exploration",
   },
   {
     id: 2,
     title: "Cyberpunk Noir",
     type: "image",
     url: "https://picsum.photos/600/800?grayscale&random=11",
-    description: "Stable Diffusion XL"
+    description: "Stable Diffusion XL",
   },
   {
     id: 3,
     title: "Abstract Kinetics",
     type: "video",
     url: "https://picsum.photos/600/800?grayscale&random=12",
-    description: "Runway Gen-2 Animation"
+    description: "Runway Gen-2 Animation",
   },
   {
     id: 4,
     title: "Synthetic Nature",
     type: "image",
     url: "https://picsum.photos/600/800?grayscale&random=13",
-    description: "DALL-E 3 Composition"
+    description: "DALL-E 3 Composition",
   },
   {
     id: 5,
     title: "Digital Fluidity",
     type: "video",
     url: "https://picsum.photos/600/800?grayscale&random=14",
-    description: "Pika Labs Render"
-  }
+    description: "Pika Labs Render",
+  },
 ];
+
+export const HERO_CONTENT = {
+  badge: "Dann Falcon - Fullstack Developer",
+  title: {
+    first: "YOSHUA",
+    highlight: `"DANN"`,
+    last: "SOTO",
+  },
+  subtitle: "Fullstack Developer",
+  backgroundElements: {
+    circle1: true,
+    circle2: true,
+  },
+};
+
+export const ABOUT_CONTENT = {
+  badge: "FULLSTACK DEVELOPER",
+  title: {
+    main: 'Yoshua "Dann" Soto, ',
+    highlight: "Fullstack Developer",
+  },
+  description:
+    "Soy Yoshua Soto, desarrollador full-stack especializado en JavaScript/TypeScript con experiencia en el desarrollo de aplicaciones web, principalmente en Laravel y Django. Experiencia en desarrollo frontend utilizando CSS vanilla para crear interfaces modernas y responsivas para todo tipo de sitios web y aplicaciones, aplicando la gestión DOM vanilla o utilizando React con herramientas como Frame-motion y GSAP. Actualmente trabajo con NextJS, Astro y React para proporcionar una experiencia de usuario más interactiva en la web utilizando Antigravity para potenciar la experiencia de usuario.",
+  expandedBio: {
+    badge: "01.1",
+    title: "Biografia Extendida",
+    quote:
+      "Mi nombre es Yoshua 'Dann' Soto. Dann proviene de mi segundo nombre, Daniel, y es el referente a mi marca personal Dann Falcon.",
+    paragraphs: [
+      "Desde muy joven, crecí rodeado de ordenadores, sistemas operativos y conexiones de red. Tras terminar la universidad, adquirí experiencia trabajando con la infraestructura de servidores locales de una universidad, pero di el salto al desarrollo web con PHP clásico, que en aquel momento era la versión 7. Junto con Laravel 8, trabaje cooperando a crear apps en aquella época.",
+      "Luego, durante unos años, desarrollé páginas de aterrizaje utilizando solo CSS vanilla, ya que Tailwind y Bootstrap tienen, en mi opinión, muchas limitaciones para el desarrollo utilizando un branding en especifico. Con eso, me convertí en desarrollador remoto de páginas de aterrizaje para una marca de préstamos hipotecarios en Miami creando Landing Page con Unbounce y mejorandolas con CSS y JS.",
+      "Actualmente, con mi especialización en JavaScript/TypeScript y con la ayuda de la IA, puedo crear sitios web con experiencias de usuario increíbles en React/TS, aplicando principalmente GSAP y Framer-motion, por lo que utilizo esta herramienta (Antigravity) para desarrollar el frontend y para el backend utilizo Supabase y Prisma de forma manual para conectar a una DB.",
+    ],
+    est: "EST. 1995",
+  },
+  buttons: {
+    readBio: "Leer Biografia",
+    downloadCv: "Descargar CV",
+  },
+  image: {
+    sidebar: "./dist/images/profile.jpg",
+    modal: "./dist/images/profile2.jpg",
+  },
+};
+
+export const CONTACT_CONTENT = {
+  badge: "Inquiries",
+  title: {
+    main: "Let's start a ",
+    highlight: "dialogue",
+  },
+  description:
+    "I am available to hear proposals for work, projects, and other opportunities. Please write to me to arrange a meeting.",
+  email: {
+    label: "Direct Email",
+    address: "yoshuasoto54@gmail.com",
+  },
+  form: {
+    nameLabel: "Name",
+    emailLabel: "Email",
+    messageLabel: "Message",
+    submitButton: {
+      idle: "Send Message",
+      sending: "Sending...",
+      success: "Message Sent",
+    },
+  },
+};
+
+export const PORTFOLIO_CONTENT = {
+  sectionTitle: "Portafolio",
+  scrollHint: "Scrollea para explorar",
+  viewProject: "Ver",
+  viewArchive: "Ver todo",
+  modal: {
+    viewLive: "Ver en vivo",
+    defaultDescription:
+      "Project description currently unavailable. Please check back later for case study details.",
+  },
+};
+
+export const SKILLS_CONTENT = {
+  sectionTitle: "Habilidades",
+  sectionNumber: "02",
+};
+
+export const FOOTER_CONTENT = {
+  name: "YOSHUA SOTO",
+  copyright: "© 2024. All Rights Reserved.",
+  socialLinks: [
+    { platform: "LinkedIn", url: "#" },
+    { platform: "GitHub", url: "#" },
+    { platform: "Twitter", url: "#" },
+    { platform: "YouTube", url: "#" },
+    { platform: "TikTok", url: "#" },
+    { platform: "Email", url: "mailto:yoshuasoto54@gmail.com" },
+  ],
+};

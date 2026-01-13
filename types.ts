@@ -21,8 +21,8 @@ export interface Resource {
 
 export interface MediaItem {
   title: string;
-  platform: string;
-  date: string;
+  description: string;
+  link: string;
 }
 
 export interface AiMediaItem {

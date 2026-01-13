@@ -59,25 +59,33 @@ export const RESOURCES: Resource[] = [
     type: "GitHub Repo",
     link: "https://github.com/YoshuaSoto95/adminLTE-synthwave",
   },
-  { title: "React Performance Patterns", type: "Article", link: "#" },
-  { title: "Clean Architecture for Frontend", type: "GitHub Repo", link: "#" },
+  {
+    title: "AdminLTE Synthwave II Admin",
+    type: "GitHub Repo",
+    link: "https://github.com/YoshuaSoto95/adminLTE-synthwave-II",
+  },
+  {
+    title: "Entorno de Desarrollo en Typescript",
+    type: "GitHub Repo",
+    link: "https://github.com/YoshuaSoto95/practice-ts",
+  },
 ];
 
 export const MEDIA: MediaItem[] = [
   {
-    title: "Building Scalable Systems",
-    platform: "Tech Podcast",
-    date: "OCT 2024",
+    title: "Miami Prime Mortgage",
+    description: "Landing Page Style Smart Card",
+    link: "https://miami-prime-mortgage.yoshuasoto54.workers.dev/",
   },
   {
-    title: "The Future of Web Dev",
-    platform: "Conference Talk",
-    date: "AUG 2024",
+    title: "Miami Mortgage Landing",
+    description: "Landing Page Style Premium",
+    link: "https://miami-prime-mortgage---mortgage-pro.yoshuasoto54.workers.dev/",
   },
   {
-    title: "Mastering TypeScript",
-    platform: "YouTube Series",
-    date: "JUN 2024",
+    title: "Dolce Vita Paradiso",
+    description: "Web React + TypeScript, React Router Dom",
+    link: "https://dolce-vita-paradiso-web.yoshuasoto54.workers.dev/",
   },
 ];
 
@@ -164,25 +172,25 @@ export const ABOUT_CONTENT = {
 };
 
 export const CONTACT_CONTENT = {
-  badge: "Inquiries",
+  badge: "Contactame",
   title: {
-    main: "Let's start a ",
-    highlight: "dialogue",
+    main: "Vamos a comenzar un proyecto",
+    highlight: "Hablemos",
   },
   description:
-    "I am available to hear proposals for work, projects, and other opportunities. Please write to me to arrange a meeting.",
+    "Estoy disponible para escuchar propuestas de trabajo, proyectos y otras oportunidades. Por favor, escribeme para arreglar una reunión.",
   email: {
-    label: "Direct Email",
+    label: "Correo Directo",
     address: "yoshuasoto54@gmail.com",
   },
   form: {
-    nameLabel: "Name",
-    emailLabel: "Email",
-    messageLabel: "Message",
+    nameLabel: "Nombre",
+    emailLabel: "Correo",
+    messageLabel: "Mensaje",
     submitButton: {
-      idle: "Send Message",
-      sending: "Sending...",
-      success: "Message Sent",
+      idle: "Enviar",
+      sending: "Enviando...",
+      success: "Mensaje Enviado",
     },
   },
 };
@@ -191,7 +199,7 @@ export const PORTFOLIO_CONTENT = {
   sectionTitle: "Portafolio",
   scrollHint: "Scrollea para explorar",
   viewProject: "Ver",
-  viewArchive: "Ver todo",
+  viewArchive: "Portafolio de Github",
   modal: {
     viewLive: "Ver en vivo",
     defaultDescription:
@@ -206,13 +214,16 @@ export const SKILLS_CONTENT = {
 
 export const FOOTER_CONTENT = {
   name: "YOSHUA SOTO",
-  copyright: "© 2024. All Rights Reserved.",
+  copyright: "© 2026. All Rights Reserved.",
   socialLinks: [
-    { platform: "LinkedIn", url: "#" },
-    { platform: "GitHub", url: "#" },
-    { platform: "Twitter", url: "#" },
-    { platform: "YouTube", url: "#" },
     { platform: "TikTok", url: "#" },
+    { platform: "YouTube", url: "#" },
+    { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },
+    { platform: "GitHub Secondary", url: "https://github.com/YoshuaSoto95" },
+    {
+      platform: "WhatsApp",
+      url: "https://api.whatsapp.com/send?phone=+58%20422-0331995&text=Deseo%20una%20cotizacion",
+    },
     { platform: "Email", url: "mailto:yoshuasoto54@gmail.com" },
   ],
 };

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { CONTACT_CONTENT } from "../constants";
+import emailjs from "@emailjs/browser";
+import { Check, X } from "lucide-react";
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -9,18 +11,38 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Simulate API call
-    setTimeout(() => {
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formState.name,
+          from_email: formState.email,
+          message: formState.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
       setStatus("success");
       setFormState({ name: "", email: "", message: "" });
-      // Reset status after a delay
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+
+      // Auto close after 5 seconds if user doesn't close manually
+      setTimeout(() => {
+        if (status === "success") setStatus("idle");
+      }, 5000);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   const handleChange = (
@@ -125,6 +147,8 @@ const Contact: React.FC = () => {
                     ? CONTACT_CONTENT.form.submitButton.sending
                     : status === "success"
                     ? CONTACT_CONTENT.form.submitButton.success
+                    : status === "error"
+                    ? "Error"
                     : CONTACT_CONTENT.form.submitButton.idle}
                 </span>
                 {status === "idle" && (
@@ -135,6 +159,55 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
+
+      {/* Success Modal */}
+      <AnimatePresence>
+        {status === "success" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-luxury-overlay-strong backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-luxury-black border border-luxury-border p-8 md:p-12 relative max-w-lg w-full text-center shadow-2xl"
+            >
+              <button
+                onClick={() => setStatus("idle")}
+                className="absolute top-4 right-4 text-luxury-gray hover:text-luxury-white transition-colors"
+                aria-label="Cerrar modal"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 rounded-full border border-green-500/20 flex items-center justify-center bg-green-500/10">
+                  <Check size={32} className="text-green-500" />
+                </div>
+              </div>
+
+              <h3 className="font-serif text-3xl text-luxury-white mb-4">
+                ¡Mensaje Enviado!
+              </h3>
+
+              <p className="text-luxury-gray font-sans leading-relaxed mb-8">
+                Gracias por contactarme. He recibido tu mensaje correctamente y
+                me pondré en contacto contigo a la brevedad posible.
+              </p>
+
+              <button
+                onClick={() => setStatus("idle")}
+                className="px-8 py-3 border border-luxury-border hover:border-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-300 text-xs tracking-widest uppercase text-luxury-white"
+              >
+                Cerrar
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   );
 };

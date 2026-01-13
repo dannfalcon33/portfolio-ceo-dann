@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
               className="group relative cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="relative overflow-hidden aspect-[4/5] bg-luxury-panel">
+              <div className="relative overflow-hidden aspect-square bg-luxury-panel">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -64,7 +64,7 @@ const Portfolio: React.FC = () => {
 
         <div className="mt-12 text-center md:text-right">
           <a
-            href="#"
+            href="https://github.com/dannfalcon33"
             className="text-xs tracking-[0.2em] uppercase border-b border-transparent hover:border-luxury-white transition-all pb-1 text-luxury-white"
           >
             {PORTFOLIO_CONTENT.viewArchive}

@@ -1,20 +1,66 @@
+# Portfolio - Yoshua Soto | Fullstack Developer
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img src="screen.png" alt="Portfolio Preview" width="100%" />
 </div>
 
-# Run and deploy your AI Studio app
+## 🚀 Descripción
 
-This contains everything you need to run your app locally.
+Portafolio profesional moderno y minimalista, diseñado para mostrar proyectos, habilidades y experiencia como desarrollador Fullstack. El proyecto se centra en una experiencia de usuario fluida con animaciones sofisticadas y un diseño de alto impacto visual.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1KdQ_BKIvMp1RFghS-0NVLSz1t3DuKO86
+## 🛠️ Tecnologías
 
-## Run Locally
+Este proyecto está construido con un stack tecnológico moderno:
 
-**Prerequisites:**  Node.js
+- **React 19** - Biblioteca para interfaces de usuario.
+- **TypeScript** - Tipado estático para código robusto.
+- **Vite** - Build tool ultrarrápido.
+- **Tailwind CSS** - Framework de estilos "utility-first".
+- **Framer Motion** - Animaciones complejas y transiciones suaves.
+- **Lucide React** - Iconografía moderna.
+- **EmailJS** - Servicio de envío de correos electrónicos directamente desde el frontend.
 
+## ✨ Funcionalidades Principales
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Diseño Responsivo**: Adaptado perfectamente para móviles, tablets y escritorio.
+- **Tema Claro/Oscuro**: Toggle para cambio de tema visual.
+- **Animaciones Suaves**: Transiciones de página y elementos interactivos con Framer Motion.
+- **Galería de Proyectos**: Visualización de trabajos con modales detallados.
+- **Formulario de Contacto Funcional**: Integrado con EmailJS para envío real de correos.
+  - Validación de estados (enviando, éxito, error).
+  - Modal de confirmación de envío.
+- **Botón de WhatsApp**: Acceso directo flotante para contacto rápido.
+
+## ⚙️ Configuración e Instalación
+
+1.  **Clonar el repositorio**
+
+2.  **Instalar dependencias**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Configurar Variables de Entorno**
+    Crea un archivo `.env` o `.env.local` en la raíz del proyecto y agrega tus credenciales de EmailJS:
+
+    ```env
+    VITE_EMAILJS_SERVICE_ID=tu_service_id
+    VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+    VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+    ```
+
+4.  **Correr en Desarrollo**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Construir para Producción**
+    ```bash
+    npm run build
+    ```
+
+## 📝 Licencia
+
+© 2026 Yoshua Soto. Todos los derechos reservados.

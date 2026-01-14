@@ -169,6 +169,12 @@ export const ABOUT_CONTENT = {
     sidebar: "/images/profile.png",
     modal: "/images/profile2.png",
   },
+  socialLinks: [
+    { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },
+    { platform: "GitHub Secondary", url: "https://github.com/YoshuaSoto95" },
+    { platform: "TikTok", url: "#" },
+    { platform: "YouTube", url: "#" },
+  ],
 };
 
 export const CONTACT_CONTENT = {

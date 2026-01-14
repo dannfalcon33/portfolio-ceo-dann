@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Github, Youtube, Video, Link as LinkIcon } from "lucide-react";
 import { ABOUT_CONTENT } from "../constants";
 
 const About: React.FC = () => {
@@ -36,6 +36,34 @@ const About: React.FC = () => {
           <p className="font-sans text-sm md:text-base text-luxury-gray leading-loose max-w-xl text-justify">
             {ABOUT_CONTENT.description}
           </p>
+
+          <div className="flex gap-4 mt-4">
+            {ABOUT_CONTENT.socialLinks &&
+              ABOUT_CONTENT.socialLinks.map((link, index) => {
+                const Icon = () => {
+                  if (link.platform.includes("GitHub"))
+                    return <Github size={25} />;
+                  if (link.platform.includes("YouTube"))
+                    return <Youtube size={25} />;
+                  if (link.platform.includes("TikTok"))
+                    return <Video size={25} />;
+                  return <LinkIcon size={25} />;
+                };
+
+                return (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-luxury-gray hover:text-luxury-white transition-colors duration-300"
+                    title={link.platform}
+                  >
+                    <Icon />
+                  </a>
+                );
+              })}
+          </div>
 
           <div className="pt-8 flex flex-wrap gap-6">
             <button

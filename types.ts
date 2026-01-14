@@ -74,6 +74,7 @@ export interface AboutContent {
     sidebar: string;
     modal: string;
   };
+  socialLinks: SocialLink[];
 }
 
 export interface ContactContent {

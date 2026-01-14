@@ -78,9 +78,9 @@ export const MEDIA: MediaItem[] = [
     link: "https://miami-prime-mortgage.yoshuasoto54.workers.dev/",
   },
   {
-    title: "Miami Mortgage Landing",
-    description: "Landing Page Style Premium",
-    link: "https://miami-prime-mortgage---mortgage-pro.yoshuasoto54.workers.dev/",
+    title: "Dubai Elite Estates",
+    description: "Landing Page Pro Premium",
+    link: "https://dubai-elite-estates.yoshuasoto54.workers.dev/",
   },
   {
     title: "Dolce Vita Paradiso",

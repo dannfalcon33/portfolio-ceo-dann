@@ -61,6 +61,20 @@ Este proyecto está construido con un stack tecnológico moderno:
     npm run build
     ```
 
-## 📝 Licencia
+## Sobre el Desarrollador 👨‍💻
 
-© 2026 Yoshua Soto. Todos los derechos reservados.
+**Yoshua Soto** (Dann Falcon Dev)  
+_Fullstack Developer | Especialista en TypeScript_
+
+Creador apasionado por construir aplicaciones que no solo funcionan, sino que asombran. Utilizando la potencia de la IA (Gemini) y tecnologías web modernas, me enfoco en entregar experiencias de usuario (UX) memorables e inmersivas.
+
+📫 **Contacto**
+
+- **Email**: yoshuasoto54@gmail.com
+- **WhatsApp**: +58 0422 033 1995
+
+##
+
+![Falcon Studio Dev](banner.png)
+
+© 2026 Dann Falcon Media. Todos los derechos reservados.

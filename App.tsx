@@ -9,8 +9,10 @@ import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { Sun, Moon } from "lucide-react";
+import LoadingScreen from "./components/LoadingScreen";
 
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState<string>("home");
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
@@ -60,64 +62,72 @@ const App: React.FC = () => {
   };
 
   return (
-    <div
-      className="relative w-full h-screen bg-luxury-black text-luxury-white overflow-hidden font-sans selection:bg-luxury-white selection:text-luxury-black transition-colors duration-500"
-      data-theme={theme}
-    >
-      {/* Header / Logo Fixed */}
-      <header className="fixed top-0 left-0 w-full p-8 z-50 flex justify-between items-center pointer-events-none">
-        <div
-          className="pointer-events-auto cursor-pointer mix-blend-difference text-white"
-          onClick={() => handleNavigate("home")}
-        >
-          <span className="font-serif font-bold text-xl tracking-widest">
-            YS.
-          </span>
-        </div>
-
-        <div className="pointer-events-auto flex items-center space-x-6">
-          <button
-            onClick={toggleTheme}
-            className="mix-blend-difference text-white hover:opacity-70 transition-opacity duration-300 focus:outline-none"
-            aria-label="Toggle Theme"
+    <>
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      <div
+        className={`relative w-full h-screen bg-luxury-black text-luxury-white overflow-hidden font-sans selection:bg-luxury-white selection:text-luxury-black transition-opacity duration-1000 ${
+          isLoading ? "opacity-0" : "opacity-100"
+        }`}
+        data-theme={theme}
+      >
+        {/* Header / Logo Fixed */}
+        <header className="fixed top-0 left-0 w-full p-8 z-50 flex justify-between items-center pointer-events-none">
+          <div
+            className="pointer-events-auto cursor-pointer mix-blend-difference text-white"
+            onClick={() => handleNavigate("home")}
           >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+            <span className="font-serif font-bold text-xl tracking-widest">
+              YS.
+            </span>
+          </div>
 
-          <div className="md:hidden mix-blend-difference text-white">
-            {/* Mobile Menu Icon Placeholder */}
-            <div className="space-y-1.5 cursor-pointer">
-              <div className="w-6 h-[1px] bg-current"></div>
-              <div className="w-6 h-[1px] bg-current"></div>
+          <div className="pointer-events-auto flex items-center space-x-6">
+            <button
+              onClick={toggleTheme}
+              className="mix-blend-difference text-white hover:opacity-70 transition-opacity duration-300 focus:outline-none"
+              aria-label="Toggle Theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            <div className="md:hidden mix-blend-difference text-white">
+              {/* Mobile Menu Icon Placeholder */}
+              <div className="space-y-1.5 cursor-pointer">
+                <div className="w-6 h-[1px] bg-current"></div>
+                <div className="w-6 h-[1px] bg-current"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <Navigation currentSection={currentSection} onNavigate={handleNavigate} />
+        <Navigation
+          currentSection={currentSection}
+          onNavigate={handleNavigate}
+        />
 
-      {/* 
+        {/* 
         Scroll Container
         snap-y: Axis
         snap-mandatory: Forces snap
         h-screen: Full height
         overflow-y-scroll: Enables scrolling
       */}
-      <main
-        id="main-container"
-        className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar"
-      >
-        <Hero />
-        <About />
-        <Skills />
-        <Portfolio />
-        <ResourcesMedia />
-        <Contact />
-        <Footer />
-      </main>
+        <main
+          id="main-container"
+          className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar"
+        >
+          <Hero />
+          <About />
+          <Skills />
+          <Portfolio />
+          <ResourcesMedia />
+          <Contact />
+          <Footer />
+        </main>
 
-      <WhatsAppButton />
-    </div>
+        <WhatsAppButton />
+      </div>
+    </>
   );
 };
 

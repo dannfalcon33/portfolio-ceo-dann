@@ -95,7 +95,7 @@ export const MEDIA: MediaItem[] = [
   {
     title: "Kuki Sushi",
     description: "Landing Page Restaurant",
-    link: "",
+    link: "https://kuki-sushi.yoshuasoto54.workers.dev/",
   },
 ];
 

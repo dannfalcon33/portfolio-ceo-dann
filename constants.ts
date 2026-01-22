@@ -28,6 +28,16 @@ export const PROJECTS: Project[] = [
       "Logos Tarot es una aplicación interactiva diseñada para ofrecer una experiencia espiritual profunda y accesible. Combina la sabiduría ancestral del Tarot con la tecnología moderna de inteligencia artificial. Con cartas de tarot con un diseño único y moderno al estilo del arte de Fantasia Espacial tendrás una experiencia visual impactante.",
     link: "https://logos-tarot-app.yoshuasoto54.workers.dev/",
   },
+  {
+    id: 3,
+    title: "Dolce Vita Paradiso",
+    category: "Frontend Development con React + Typescript, React Router Dom",
+    image: "/images/dolce-vita.png",
+    year: "2025",
+    description:
+      "Dolce Vita Paradiso es un portafolio web inmersivo de alta gama para un restaurante italiano contemporáneo, construido con tecnologías web modernas para ofrecer una experiencia digital lujosa.",
+    link: "https://dolce-vita-paradiso-web.yoshuasoto54.workers.dev/",
+  },
 ];
 
 export const SKILLS: SkillCategory[] = [
@@ -83,9 +93,9 @@ export const MEDIA: MediaItem[] = [
     link: "https://dubai-elite-estates.yoshuasoto54.workers.dev/",
   },
   {
-    title: "Dolce Vita Paradiso",
-    description: "Web React + TypeScript, React Router Dom",
-    link: "https://dolce-vita-paradiso-web.yoshuasoto54.workers.dev/",
+    title: "Kuki Sushi",
+    description: "Landing Page Restaurant",
+    link: "",
   },
 ];
 
@@ -164,10 +174,11 @@ export const ABOUT_CONTENT = {
   buttons: {
     readBio: "Leer Biografia",
     downloadCv: "Descargar CV",
+    cvUrl: "/data/Dann CV.pdf",
   },
   image: {
-    sidebar: "/images/profile.png",
-    modal: "/images/profile2.png",
+    sidebar: "/images/perfil1.webp",
+    modal: "/images/perfil2.jpg",
   },
   socialLinks: [
     { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },

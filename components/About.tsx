@@ -43,11 +43,6 @@ const About: React.FC = () => {
                 const Icon = () => {
                   if (link.platform.includes("GitHub"))
                     return <Github size={25} />;
-                  if (link.platform.includes("YouTube"))
-                    return <Youtube size={25} />;
-                  if (link.platform.includes("TikTok"))
-                    return <Video size={25} />;
-                  return <LinkIcon size={25} />;
                 };
 
                 return (
@@ -77,7 +72,8 @@ const About: React.FC = () => {
             </button>
 
             <a
-              href="#"
+              href={ABOUT_CONTENT.buttons.cvUrl}
+              download="Dann CV.pdf"
               className="group relative px-8 py-3 border border-luxury-border-strong hover:border-luxury-white transition-colors duration-500 overflow-hidden flex items-center justify-center"
             >
               <span className="relative z-10 text-xs tracking-widest uppercase mix-blend-difference text-luxury-white">
@@ -158,7 +154,7 @@ const About: React.FC = () => {
                     {ABOUT_CONTENT.expandedBio.paragraphs.map(
                       (paragraph, index) => (
                         <p key={index}>{paragraph}</p>
-                      )
+                      ),
                     )}
                   </div>
 

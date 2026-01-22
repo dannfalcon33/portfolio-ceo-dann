@@ -174,11 +174,11 @@ export const ABOUT_CONTENT = {
   buttons: {
     readBio: "Leer Biografia",
     downloadCv: "Descargar CV",
-    cvUrl: "/data/Dann CV.pdf",
+    cvUrl: "/data/dann-cv-definitive.pdf",
   },
   image: {
-    sidebar: "/images/perfil1.webp",
-    modal: "/images/perfil2.jpg",
+    sidebar: "/images/profil-picture.jpg",
+    modal: "/images/profil-modal.jpg",
   },
   socialLinks: [
     { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },

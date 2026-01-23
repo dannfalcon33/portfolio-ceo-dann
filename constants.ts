@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
   {
     id: 4,
     title: "LeadCard Saas",
-    category: "Frontend Development con React + Typescript, React Router Dom",
+    category: "Saas Fullstack con NextJS y Supabase",
     image: "/images/leadcard-saas.png",
     year: "2026",
     description:

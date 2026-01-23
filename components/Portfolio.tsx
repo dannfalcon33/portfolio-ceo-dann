@@ -1,33 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import SectionWrapper from "./SectionWrapper";
 import { PROJECTS, PORTFOLIO_CONTENT } from "../constants";
 import { Project } from "../types";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowUpRight } from "lucide-react";
+import { X, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Portfolio: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400; // Adjust as needed
+      const method = direction === "left" ? -scrollAmount : scrollAmount;
+      scrollContainerRef.current.scrollBy({ left: method, behavior: "smooth" });
+    }
+  };
 
   return (
     <SectionWrapper id="portafolio">
-      <div className="flex flex-col h-full justify-center">
+      <div className="flex flex-col h-full justify-center relative">
         <div className="flex justify-between items-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl text-luxury-white">
             {PORTFOLIO_CONTENT.sectionTitle}
           </h2>
-          <span className="text-xs tracking-widest text-luxury-gray uppercase hidden md:block">
-            {PORTFOLIO_CONTENT.scrollHint}
-          </span>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => scroll("left")}
+              className="p-2 rounded-full border border-luxury-border text-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-300"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="p-2 rounded-full border border-luxury-border text-luxury-white hover:bg-luxury-white hover:text-luxury-black transition-all duration-300"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div
+          ref={scrollContainerRef}
+          className="flex space-x-6 md:space-x-8 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="group relative cursor-pointer"
+              className="group relative cursor-pointer min-w-[300px] md:min-w-[400px] snap-start"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="relative overflow-hidden aspect-square bg-luxury-panel">
+              <div className="relative overflow-hidden aspect-[4/3] bg-luxury-panel">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -62,7 +86,7 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center md:text-right">
+        <div className="mt-8 text-center md:text-right">
           <a
             href="https://github.com/dannfalcon33"
             className="text-xs tracking-[0.2em] uppercase border-b border-transparent hover:border-luxury-white transition-all pb-1 text-luxury-white"

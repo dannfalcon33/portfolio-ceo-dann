@@ -38,6 +38,16 @@ export const PROJECTS: Project[] = [
       "Dolce Vita Paradiso es un portafolio web inmersivo de alta gama para un restaurante italiano contemporáneo, construido con tecnologías web modernas para ofrecer una experiencia digital lujosa.",
     link: "https://dolce-vita-paradiso-web.yoshuasoto54.workers.dev/",
   },
+  {
+    id: 4,
+    title: "LeadCard Saas",
+    category: "Frontend Development con React + Typescript, React Router Dom",
+    image: "/images/leadcard-saas.png",
+    year: "2026",
+    description:
+      "LeadCard Saas es una plataforma SaaS diseñada para la gestión de leads y clientes, construida con tecnologías web modernas para ofrecer una experiencia digital fluida y profesional.",
+    link: "https://leadcard-saas.vercel.app/",
+  },
 ];
 
 export const SKILLS: SkillCategory[] = [
@@ -174,7 +184,7 @@ export const ABOUT_CONTENT = {
   buttons: {
     readBio: "Leer Biografia",
     downloadCv: "Descargar CV",
-    cvUrl: "/data/dann-cv-definitive.pdf",
+    cvUrl: "/data/dann-cv-definitive-2026.pdf",
   },
   image: {
     sidebar: "/images/profil-picture.jpg",

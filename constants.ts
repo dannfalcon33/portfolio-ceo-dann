@@ -168,23 +168,23 @@ export const ABOUT_CONTENT = {
     highlight: "Fullstack Developer",
   },
   description:
-    "Soy Yoshua Soto, desarrollador full-stack especializado en JavaScript/TypeScript con experiencia en el desarrollo de aplicaciones web, principalmente en Laravel y Django. Experiencia en desarrollo frontend utilizando CSS vanilla para crear interfaces modernas y responsivas para todo tipo de sitios web y aplicaciones, aplicando la gestión DOM vanilla o utilizando React con herramientas como Frame-motion y GSAP. Actualmente trabajo con NextJS, Astro y React para proporcionar una experiencia de usuario más interactiva en la web utilizando Antigravity para potenciar la experiencia de usuario.",
+    "Soy Yoshua Soto, Desarrollador Full Stack especializado en el ecosistema JavaScript/TypeScript. Mi enfoque combina la ingeniería de software con el diseño interactivo. Cuento con una base sólida en backend (Laravel/Django), pero mi verdadera pasión es crear interfaces web inmersivas y de alto rendimiento utilizando Next.js, Astro y React. Me especializo en llevar la experiencia de usuario al límite, desde la manipulación nativa del DOM y CSS Vanilla hasta animaciones complejas con Framer Motion, GSAP y la implementación de Antigravity para interacciones fluidas. No solo construyo sitios web; creo experiencias digitales rápidas y escalables",
   expandedBio: {
     badge: "01.1",
     title: "Biografia Extendida",
     quote:
       "Mi nombre es Yoshua 'Dann' Soto. Dann proviene de mi segundo nombre, Daniel, y es el referente a mi marca personal Dann Falcon.",
     paragraphs: [
-      "Desde muy joven, crecí rodeado de ordenadores, sistemas operativos y conexiones de red. Tras terminar la universidad, adquirí experiencia trabajando con la infraestructura de servidores locales de una universidad, pero di el salto al desarrollo web con PHP clásico, que en aquel momento era la versión 7. Junto con Laravel 8, trabaje cooperando a crear apps en aquella época.",
-      "Luego, durante unos años, desarrollé páginas de aterrizaje utilizando solo CSS vanilla, ya que Tailwind y Bootstrap tienen, en mi opinión, muchas limitaciones para el desarrollo utilizando un branding en especifico. Con eso, me convertí en desarrollador remoto de páginas de aterrizaje para una marca de préstamos hipotecarios en Miami creando Landing Page con Unbounce y mejorandolas con CSS y JS.",
-      "Actualmente, con mi especialización en JavaScript/TypeScript y con la ayuda de la IA, puedo crear sitios web con experiencias de usuario increíbles en React/TS, aplicando principalmente GSAP y Framer-motion, por lo que utilizo esta herramienta (Antigravity) para desarrollar el frontend y para el backend utilizo Supabase y Prisma de forma manual para conectar a una DB.",
+      "Mi trayectoria comenzó en el núcleo de la tecnología: administrando infraestructura de servidores y redes universitarias. Esa base técnica sólida me permitió dar el salto al desarrollo web, iniciándome con arquitecturas en PHP y Laravel, donde aprendí la importancia de un backend robusto.",
+      "Sin embargo, mi obsesión por el detalle visual me llevó a especializarme en el Frontend. Durante años, trabajé remotamente optimizando Landing Pages para el mercado inmobiliario de Miami, donde aprendí que los frameworks estándar (como Bootstrap o Tailwind) a veces limitan la identidad de una marca. Por eso, perfeccioné el uso de CSS Vanilla: para tener control absoluto sobre cada píxel y animación.",
+      "Hoy, combino esa disciplina artesanal con la potencia de TypeScript, React y flujos de trabajo acelerados por IA. Utilizo mi sistema Antigravity junto a GSAP y Framer Motion para crear interfaces inmersivas, respaldadas por arquitecturas de datos modernas en Supabase y Prisma. No solo escribo código; diseño ecosistemas digitales completos.",
     ],
     est: "EST. 1995",
   },
   buttons: {
     readBio: "Leer Biografia",
     downloadCv: "Descargar CV",
-    cvUrl: "/data/dann-cv-definitive-2026.pdf",
+    cvUrl: "/data/CV-Resume-DannFalcon.pdf",
   },
   image: {
     sidebar: "/images/profil-picture.jpg",
@@ -193,8 +193,6 @@ export const ABOUT_CONTENT = {
   socialLinks: [
     { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },
     { platform: "GitHub Secondary", url: "https://github.com/YoshuaSoto95" },
-    { platform: "TikTok", url: "#" },
-    { platform: "YouTube", url: "#" },
   ],
 };
 
@@ -243,8 +241,8 @@ export const FOOTER_CONTENT = {
   name: "YOSHUA SOTO",
   copyright: "© 2026. All Rights Reserved.",
   socialLinks: [
-    { platform: "TikTok", url: "#" },
-    { platform: "YouTube", url: "#" },
+    { platform: "TikTok", url: "https://www.tiktok.com/@masterhorus33" },
+    { platform: "YouTube", url: "https://www.youtube.com/@falconstudiodev" },
     { platform: "GitHub Main", url: "https://github.com/dannfalcon33" },
     { platform: "GitHub Secondary", url: "https://github.com/YoshuaSoto95" },
     {
